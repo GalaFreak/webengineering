@@ -7,6 +7,10 @@ h1 {
     margin: 0 auto auto auto;
 }
 
+h2 {
+    
+}
+
 header {
     margin: 0;
     background-color: #16F0E5;
@@ -66,6 +70,25 @@ ul {
     height: 100%;
 }
 
+footer {
+    background-color: #16F0E5;
+}
+
+footer h1 {
+    color: #0000ff;
+}
+
+#footah {
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.Mirko {
+    float: left;
+}
 
 @font-face {
     font-family: 'Slate for OnePlus';
