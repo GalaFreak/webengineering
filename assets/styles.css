@@ -1,5 +1,6 @@
 html {
     margin: 0;
+    font-family: 'Slate for OnePlus', sans-serif;
 }
 
 h1 {
@@ -8,8 +9,16 @@ h1 {
 }
 
 h2 {
-    
+    font-family: 'Heavitas';
+    margin: 0 auto auto auto;
+    font-weight: lighter;
 }
+
+/* div {
+    width: 2px;
+    height: 80%;
+    background-color: #16F0E5;
+} */
 
 header {
     margin: 0;
@@ -23,7 +32,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
-    font-family: 'Slate for OnePlus', sans-serif;
 }
 
 ul {
@@ -72,22 +80,54 @@ ul {
 
 footer {
     background-color: #16F0E5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: solid 0.1rem #0000ff;
+    border-bottom: solid 0.1rem #0000ff;
 }
 
 footer h1 {
     color: #0000ff;
-}
-
-#footah {
-    list-style: none;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
+    margin-bottom: 1rem;
 }
 
 .Mirko {
+    border-left: #000000;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.Mirko ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.Mirko li {
+    margin-bottom: 1rem;
+    font-family: 'Heavitas';
+}
+
+#postfooter {
+    align-items: center;
     float: left;
+    display: flex;
+    justify-content: space-around;
+}
+
+#postfooter div {
+    align-items: center;
+    display: flex;
+}
+
+#postfooter img{
+    max-width: 20%;
+    height: auto;
+}
+
+#postfooter p {
+    text-wrap: nowrap;
+    margin-right: 1rem;
 }
 
 @font-face {
@@ -101,6 +141,14 @@ footer h1 {
 @font-face {
     font-family: 'Bahnschrift';
     src: url(/assets/BAHNSCHRIFT.TTF);
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Heavitas';
+    src: url(/assets/Heavitas.ttf);
     font-style: normal;
     font-weight: 500;
     font-display: swap;
