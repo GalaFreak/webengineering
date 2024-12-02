@@ -108,11 +108,11 @@ main p {
 .contentr {
     margin: 0;
     height: 98%;
-    background-color: #ffffff;
+    background-color: #E4DAD4;
     clip-path: polygon(15.5% 1%, 99% 2%, 99% 99%, 1% 99%, 16% 99%, 10% 60%);
     padding-left: 17%;
     padding-top: 0.5%;
-    font-size: large;
+    font-size:x-large;
 }
 
 .Ball {
@@ -128,26 +128,35 @@ main p {
 .contentl {
     margin: 0;
     height: 98%;
-    background-color: #ffffff;
+    background-color: #E4DAD4;
     clip-path: polygon(1% 1%, 84% 1%, 90% 60%, 84% 99%, 1% 99%);
     padding-left: 1.5%;
     padding-top: 0.5%;
-    font-size: large;
+    font-size: x-large;
 }
 
 footer {
     background-color: #16F0E5;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-auto-flow: column;
     justify-content: space-around;
     border-top: solid 0.1rem #0000ff;
     border-bottom: solid 0.1rem #0000ff;
     width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 25rem repeat(2, 8rem);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 footer h1 {
     color: #0000ff;
     margin-bottom: 1rem;
+    padding-left: 5%;
+}
+
+footer h2 {
+    padding-left: 5%;
 }
 
 .Mirko {
@@ -156,15 +165,64 @@ footer h1 {
     margin-bottom: 3rem;
 }
 
+.Mirko:nth-of-type(1) {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.Mirko:nth-of-type(2) {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.Mirko:nth-of-type(3) {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.Mirko:nth-of-type(4) {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
 .Mirko ul {
     list-style-type: none;
-    padding-left: 0;
+    padding-left: 5%;
 }
 
 .Mirko li {
     margin-bottom: 1rem;
     font-family: 'Heavitas';
     width: 100%;
+}
+
+.Mirko a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#social {
+    grid-area: 2 / 1 / 3 / 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+#social a {
+    max-width: 7rem;
+}
+
+.social {
+    max-width: 100%;
+}
+
+#pay {
+    grid-area: 3 / 1 / 4 / 3;
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+    justify-content: space-between;
+}
+
+.pay {
+    max-width: 20%;
 }
 
 #postfooter {
@@ -215,6 +273,33 @@ footer h1 {
 
 @media screen and (max-width: 1024px) {
     footer {
-        flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 30rem) 40rem repeat(2, 8rem);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+    .Mirko:nth-of-type(1) {
+        grid-area: 1 / 1 / 2 / 2;;
+    }
+    
+    .Mirko:nth-of-type(2) {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    
+    .Mirko:nth-of-type(3) {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    
+    .Mirko:nth-of-type(4) {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    #social {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+    #pay {
+        grid-area: 6 / 1 / 7 / 2;
     }
 }
