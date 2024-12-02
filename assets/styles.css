@@ -28,6 +28,13 @@ header {
     border-bottom: solid 0.5rem #0000ff;
 }
 
+header h1 {
+    color: #0000ff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -56,16 +63,9 @@ ul {
     margin: 0;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 3rem;
     width: 100%;
-}
-
-#navbar a {
-    color: #0000ff;
-    text-decoration: none;
-    display: block;
-    text-align: center;
 }
 
 #navbar a:hover{
@@ -78,6 +78,63 @@ ul {
     height: 100%;
 }
 
+main {
+    margin: 1%;
+    height: 100rem;
+    position: relative;
+}
+
+main p {
+    margin: 0;
+    padding: 0;;
+}
+
+.links {
+    left: 0;
+    background-color: red;
+    position: absolute;
+}
+
+.Feder {
+    background-color: #000000;
+    position: absolute;
+    /* border: solid 0.25rem #000000; */
+    right: 0;
+    height: 25rem;
+    width: 80%;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 9% 60%);
+}
+
+.contentr {
+    margin: 0;
+    height: 98%;
+    background-color: #ffffff;
+    clip-path: polygon(15.5% 1%, 99% 2%, 99% 99%, 1% 99%, 16% 99%, 10% 60%);
+    padding-left: 17%;
+    padding-top: 0.5%;
+    font-size: large;
+}
+
+.Ball {
+    background-color: #000000;
+    position: absolute;
+    left: 0;
+    top: 27rem;
+    height: 25rem;
+    width: 80%;
+    clip-path: polygon(0 0, 85% 0, 91% 60%, 85% 100%, 0 100%);
+}
+
+.contentl {
+    margin: 0;
+    height: 98%;
+    background-color: #ffffff;
+    clip-path: polygon(1% 1%, 84% 1%, 90% 60%, 84% 99%, 1% 99%);
+    padding-left: 1.5%;
+    padding-top: 0.5%;
+    font-size: large;
+}
+
 footer {
     background-color: #16F0E5;
     display: flex;
@@ -85,6 +142,7 @@ footer {
     justify-content: space-around;
     border-top: solid 0.1rem #0000ff;
     border-bottom: solid 0.1rem #0000ff;
+    width: 100%;
 }
 
 footer h1 {
@@ -106,6 +164,7 @@ footer h1 {
 .Mirko li {
     margin-bottom: 1rem;
     font-family: 'Heavitas';
+    width: 100%;
 }
 
 #postfooter {
@@ -152,4 +211,10 @@ footer h1 {
     font-style: normal;
     font-weight: 500;
     font-display: swap;
+}
+
+@media screen and (max-width: 1024px) {
+    footer {
+        flex-direction: column;
+    }
 }
