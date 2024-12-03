@@ -174,7 +174,7 @@ main p {
 }
 
 .rim {
-    width: 70%;
+    max-width: 60%;
 }
 
 #contentr2 div {
@@ -191,7 +191,6 @@ main p {
 
 .rim:nth-of-type(3) {
     grid-area: 1 / 4 / 2 / 5;
-    margin-top: 20%;
 }
 
 .rim:nth-of-type(4) {
@@ -399,7 +398,7 @@ footer h2 {
 
 @font-face {
     font-family: 'Slate for OnePlus';
-    src: url(/assets/SlateForOnePlus-Regular.ttf);
+    src: url(assets/SlateForOnePlus-Regular.ttf);
     font-style: normal;
     font-weight: 500;
     font-display: swap;
@@ -407,7 +406,7 @@ footer h2 {
 
 @font-face {
     font-family: 'Bahnschrift';
-    src: url(/assets/BAHNSCHRIFT.TTF);
+    src: url(assets/BAHNSCHRIFT.TTF);
     font-style: normal;
     font-weight: 500;
     font-display: swap;
@@ -415,7 +414,7 @@ footer h2 {
 
 @font-face {
     font-family: 'Heavitas';
-    src: url(/assets/Heavitas.ttf);
+    src: url(assets/Heavitas.ttf) format('truetype');
     font-style: normal;
     font-weight: 500;
     font-display: swap;
