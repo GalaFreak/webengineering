@@ -28,7 +28,7 @@ header {
     border-bottom: solid 0.5rem #0000ff;
 }
 
-header h1 {
+header a {
     color: #0000ff;
     text-decoration: none;
     display: block;
@@ -80,7 +80,7 @@ ul {
 
 main {
     margin: 1%;
-    height: 100rem;
+    height: 80rem;
     position: relative;
 }
 
@@ -91,18 +91,55 @@ main p {
 
 .links {
     left: 0;
-    background-color: red;
+    max-width: 28%;
+    height: 25rem;
     position: absolute;
+    font-size: xx-large;
+    line-height: 3rem;
+    opacity: 100%;
+    animation-name: text;
+    animation-duration: 1.5s;
+    font-family: 'Heavitas';
+    font-weight: lighter;
+    font-size: x-large;
+}
+
+.links ul {
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+.links ul li {
+}
+
+.links ul li::before {
+    content: '';
 }
 
 .Feder {
     background-color: #000000;
     position: absolute;
     /* border: solid 0.25rem #000000; */
-    right: 0;
+    left: 20%;
     height: 25rem;
     width: 80%;
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 9% 60%);
+    animation-name: feder;
+    animation-duration: 1.5s;
+}
+
+.Feder:nth-of-type(5) {
+    top: 54rem;
+}
+
+.Feder h1 {
+    padding-top: 1%;
+    color: #0000ff;
 }
 
 .contentr {
@@ -113,16 +150,30 @@ main p {
     padding-left: 17%;
     padding-top: 0.5%;
     font-size:x-large;
+    line-height: 2.5rem;
+}
+
+.contentr p {
+    left: 0;
+    max-width: 95%;
 }
 
 .Ball {
     background-color: #000000;
     position: absolute;
-    left: 0;
+    right: 20%;
     top: 27rem;
     height: 25rem;
     width: 80%;
     clip-path: polygon(0 0, 85% 0, 91% 60%, 85% 100%, 0 100%);
+    line-height: 2.5rem;
+    animation-name: ball;
+    animation-duration: 1.5s;
+}
+
+.Ball h1 {
+    padding-top: 1%;
+    color: #0000ff;
 }
 
 .contentl {
@@ -135,6 +186,36 @@ main p {
     font-size: x-large;
 }
 
+.contentl p {
+    left: 0;
+    max-width: 85%;
+}
+
+.rechts {
+    left: 75%;
+    max-width: 28%;
+    position: absolute;
+    font-size: xx-large;
+    line-height: 3rem;
+    opacity: 100%;
+    animation-name: text;
+    animation-duration: 1.5s;
+    top: 27rem;
+}
+
+.rechts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rechts ul li {
+    margin-bottom: 2rem;
+}
+
+.rechts ul li::before {
+    content: '';
+}
+
 footer {
     background-color: #16F0E5;
     display: grid;
@@ -144,7 +225,7 @@ footer {
     border-bottom: solid 0.1rem #0000ff;
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 25rem repeat(2, 8rem);
+    grid-template-rows: 20rem repeat(2, 8rem);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
@@ -178,7 +259,7 @@ footer h2 {
 }
 
 .Mirko:nth-of-type(4) {
-    grid-area: 1 / 4 / 2 / 5;
+    grid-area: 1 / 4 / 4 / 5;
 }
 
 .Mirko ul {
@@ -200,13 +281,14 @@ footer h2 {
 #social {
     grid-area: 2 / 1 / 3 / 3;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: left;
+    padding-left: 3%;
+    gap: 5%
 }
 
 #social a {
-    max-width: 7rem;
+    max-width: 6rem;
 }
 
 .social {
@@ -217,8 +299,9 @@ footer h2 {
     grid-area: 3 / 1 / 4 / 3;
     display: flex;
     align-items: center;
+    justify-content: left;
     padding-left: 3%;
-    justify-content: space-between;
+    gap: 5%;
 }
 
 .pay {
@@ -302,4 +385,19 @@ footer h2 {
     #pay {
         grid-area: 6 / 1 / 7 / 2;
     }
+}
+
+@keyframes feder {
+    from {left: 100%;}
+    to {left: 20%;}
+}
+
+@keyframes ball {
+    from {right: 100%;}
+    to {right: 20%;}
+}
+
+@keyframes text {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
 }
