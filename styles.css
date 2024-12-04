@@ -174,7 +174,7 @@ main p {
 }
 
 .rim {
-    max-width: 70%;
+    max-width: 80%;
 }
 
 #contentr2 div {
@@ -199,6 +199,9 @@ main p {
 
 .rim:nth-of-type(5) {
     grid-area: 1 / 5 / 2 / 6; 
+}
+.rim:nth-of-type(6) {
+    grid-area: 2 / 4 / 3 / 5;
 }
 
 .Ball {
