@@ -167,14 +167,14 @@ main p {
     font-size:x-large;
     line-height: 2.5rem;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 25%) repeat(3, 15%);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 0px;
 }
 
 .rim {
-    max-width: 60%;
+    max-width: 70%;
 }
 
 #contentr2 div {
@@ -230,12 +230,10 @@ main p {
     display: flex;
     flex-direction: row;
     align-items: start;
-    justify-content:space-evenly;
 }
 
 #contentl p {
     left: 0;
-    max-width: 85%;
 }
 
 #contentl img:nth-of-type(1) {
